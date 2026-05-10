@@ -35,8 +35,9 @@
 <script setup>
 import { ref, shallowRef } from 'vue'
 // 导入所有可能用到的子组件
+import tableApp from '@/views/Learning/VueProject/VueTest3/tableApp.vue'
 import ToDoApp from '@/views/Learning/VueProject/VueTest2/ToDoApp.vue'
-import VueTest1 from '@/views/Learning/VueProject/VueTest1.vue'
+import VueTest1 from '@/views/Learning/VueProject/VueTest1/VueTest1.vue'
 import SpringBoot1 from '@/views/Learning/SpringBootLearing/SpringBoot1.vue'
 // 预留其他组件占位，可以后续按需导入
 const EmptyComponent = { template: '<div class="placeholder-content">请从左侧选择要查看的内容</div>' }
@@ -49,7 +50,8 @@ const menuItems = ref([
     showSub: false,
     subItems: [
       { id: 11, title: 'Vue项目之学习计划表', component: VueTest1, props: {} },
-      { id: 12, title: 'ToDoList', component: ToDoApp, props: {} }
+      { id: 12, title: 'ToDoList', component: ToDoApp, props: {} },
+      { id: 13, title: '商品表格组件', component: tableApp, props: {} }
     ]
   },
   {
