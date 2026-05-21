@@ -1,7 +1,7 @@
 
 <script setup>
-import HeaderBar from './components/HeaderBar.vue';
-import NavBar from './components/NavBar.vue';
+import HeaderBar from './components/Home/HeaderBar.vue';
+import NavBar from './components/Home/NavBar.vue';
 </script>
 
 <template>
@@ -21,7 +21,7 @@ import NavBar from './components/NavBar.vue';
       max-width: 1200px; /* 最大宽度，适应大屏幕 */
       padding: 0 10px;    /* 内边距，防止内容贴边 */
       box-sizing: border-box; /* 让 padding 包含在宽度内（推荐） */
-      margin-top: 100px; /* 给顶部留出空间，避免被标题栏遮挡 */
+      margin-top: 60px; /* 给顶部留出空间，避免被标题栏遮挡 */
     }
 
 </style>

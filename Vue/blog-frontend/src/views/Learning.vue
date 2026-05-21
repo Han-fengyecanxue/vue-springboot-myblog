@@ -35,10 +35,10 @@
 <script setup>
 import { ref, shallowRef } from 'vue'
 // 导入所有可能用到的子组件
-import tableApp from '@/views/Learning/VueProject/VueTest3/tableApp.vue'
-import ToDoApp from '@/views/Learning/VueProject/VueTest2/ToDoApp.vue'
-import VueTest1 from '@/views/Learning/VueProject/VueTest1/VueTest1.vue'
-import SpringBoot1 from '@/views/Learning/SpringBootLearing/SpringBoot1.vue'
+import tableApp from '../components/Learning/VueProject/VueTest3/tableApp.vue'
+import ToDoApp from '../components/Learning/VueProject/VueTest2/ToDoApp.vue'
+import VueTest1 from '../components/Learning/VueProject/VueTest1/VueTest1.vue'
+import SpringBoot1 from '../components/Learning/SpringBootLearing/SpringBoot1.vue'
 // 预留其他组件占位，可以后续按需导入
 const EmptyComponent = { template: '<div class="placeholder-content">请从左侧选择要查看的内容</div>' }
 

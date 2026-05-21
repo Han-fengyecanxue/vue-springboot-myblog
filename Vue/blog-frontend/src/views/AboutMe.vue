@@ -11,7 +11,7 @@
 
 <style scoped>
 .carousel {
-  width: 100%;           /* 轮播图容器宽度占满父级 */
+  width: 80%;           /* 容器宽度占满父级 */
   overflow: hidden;      /* 防止溢出 */
 }
 

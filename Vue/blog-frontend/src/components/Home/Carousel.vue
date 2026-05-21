@@ -49,7 +49,7 @@ const props = defineProps({
   images: {
     type: Array,
     default: () => [
-      '/images/photo1.png',
+      '/images/photo1.jpg',
       '/images/views/石臼湖 (1).jpg',   // 石臼湖1
       '/images/views/石臼湖 (2).jpg',    // 石臼湖2
       '/images/views/石臼湖 (3).jpg',    // 石臼湖3
@@ -143,8 +143,8 @@ onUnmounted(() => {
 <style scoped>
 .carousel {
   position: relative;
-  width: 100%;
-  margin-top: 10px;
+  width: 100%;  /* 宽度自适应 */
+  margin-top: 10px; /* 顶部留出10px */
   overflow: hidden;
   border-radius: 8px;
   background-color: #f0f0f0;

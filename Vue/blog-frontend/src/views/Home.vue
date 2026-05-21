@@ -1,6 +1,6 @@
 <script setup>
-import Carousel from '@/components/Carousel.vue';
-import ContentPanel from '@/components/ContentPanel.vue';
+import Carousel from '@/components/Home/Carousel.vue';
+import ContentPanel from '@/components/Home/ContentPanel.vue';
 
 import axios from 'axios';
 

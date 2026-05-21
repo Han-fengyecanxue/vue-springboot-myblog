@@ -6,14 +6,15 @@ import AboutMe from '../views/AboutMe.vue';
 
 const routes = [
   { path: '/', component: Home },
+  { path: '/aboutme', component: AboutMe },
   { path: '/learning', component: Learning },
-  { path: '/hobbies', component: Hobbies },
-  { path: '/aboutme', component: AboutMe }
+  { path: '/hobbies', component: Hobbies }
 ];
 
 const router = createRouter({
   history: createWebHistory(),
   routes
 });
+
 
 export default router;

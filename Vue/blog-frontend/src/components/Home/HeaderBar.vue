@@ -10,7 +10,7 @@
 </template>
 
 <script setup>
-import LoginRegisterDialog from './LoginRegisterDialog.vue';
+import LoginRegisterDialog from '../LoginRegisterDialog.vue';
 import { ref } from 'vue';
 
 const showLoginDialog = ref(false);
