@@ -1,14 +1,10 @@
 //内容栏
 <template>
     <div class="content-panel1">
-        <h2>欢迎来到我的博客！</h2>
-        <p>这是一个使用Vue.js构建的博客网站。</p>
-        <p>在这里你可以找到我的最新文章、项目和想法。</p>
-    </div>
-    <div class="content-panel2">
         <div class="hot">
             <h2>网站更新日志</h2>
             <ul>
+                <li><a href="#">2026年5月23日，样式修改</a></li>
                 <li><a href="#">2026年5月21日，换了个导航栏</a></li>
                 <li><a href="#">2026年5月10日，商品表格组件</a></li>
                 <li><a href="#">2026年4月28日，修改网站名称为枫叶残雪的博客网站，图标，更新学习页面UI.</a></li>
@@ -35,13 +31,6 @@
 
 <style scoped>
 .content-panel1 {
-    background-color: #ffffff; /* 背景颜色 */
-    padding: 20px;         /* 内边距 */
-    border-radius: 8px;    /* 圆角 */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 阴影效果 */
-    margin-bottom: 20px;   /* 下边距 */
-}
-.content-panel2{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;            /* 子元素之间的间距 */

@@ -5,7 +5,7 @@
 
     <!-- 左侧目录面板 -->
     <div class="directory-panel" v-if="showDirectory">
-      <button @click="showDirectory = !showDirectory">☰</button>
+      <button @click="showDirectory = !showDirectory">☰ 目录</button>
       <h3>文章 / 项目</h3>
       <ul>
         <li
@@ -87,9 +87,9 @@ const showDirectory = ref(false)
 
 <style scoped>
 /* 保留原有样式，适当调整右侧面板高度等 */
-.directory { position: relative; }
+.directory { position: relative; }  
 .directory-panel {
-  position: fixed; left: 0; top: 100px; width: 210px;
+  position: fixed; left: 0; top: 80px; width: 210px;
   background: #f9f9f9; border: 1px solid #ddd; padding: 15px; z-index: 100;
 }
 .content-panel {
@@ -97,11 +97,11 @@ const showDirectory = ref(false)
   min-height: 500px;
 }
 .menu-item {
-  position: relative; cursor: pointer; margin: 10px 0;
+  position: relative; cursor: pointer;margin: 10px 0; 
   color: blue; text-decoration: underline;
 }
 .sub-menu {
-  position: absolute; left: 100%; top: 0; background: white;
+  position: absolute; left: 65%; top: 0; background: white;
   border: 1px solid #ccc; padding: 8px 0; min-width: 180px;
   box-shadow: 2px 2px 8px rgba(0,0,0,0.1); z-index: 200;
 }

@@ -1,7 +1,7 @@
 
 <script setup>
-import HeaderBar from './components/Home/HeaderBar.vue';
-import NavBar from './components/Home/NavBar.vue';
+import HeaderBar from './components/Common/HeaderBar.vue';
+import NavBar from './components/Common/NavBar.vue';
 </script>
 
 <template>

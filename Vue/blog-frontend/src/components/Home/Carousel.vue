@@ -1,42 +1,51 @@
 <template>
-  <div class="carousel" @mouseenter="stopAutoPlay" @mouseleave="startAutoPlay">
-    <!-- 图片展示区 -->
-    <div class="image-container">
-      <img 
-        :src="images[currentIndex]" 
-        :alt="`Slide ${currentIndex + 1}`"
-        class="carousel-image"
-      />
+  <div class="widebox">
+    <div class="carousel" @mouseenter="stopAutoPlay" @mouseleave="startAutoPlay">
+      <!-- 图片展示区 -->
+      <div class="image-container">
+        <img 
+          :src="images[currentIndex]" 
+          :alt="`Slide ${currentIndex + 1}`"
+          class="carousel-image"
+        />
+      </div>
+
+      <!-- 上一张按钮（多于1张时显示） -->
+      <button 
+        v-if="totalImages > 1" 
+        class="carousel-btn prev" 
+        @click="prev"
+        aria-label="上一张"
+      >
+        ❮
+      </button>
+
+      <!-- 下一张按钮（多于1张时显示） -->
+      <button 
+        v-if="totalImages > 1" 
+        class="carousel-btn next" 
+        @click="next"
+        aria-label="下一张"
+      >
+        ❯
+      </button>
+
+      <!-- 指示点（多于1张时显示） -->
+      <div v-if="totalImages > 1" class="indicators">
+        <span 
+          v-for="(_, index) in images" 
+          :key="index"
+          :class="['indicator-dot', { active: index === currentIndex }]"
+          @click="goTo(index)"
+        ></span>
+      </div>
     </div>
 
-    <!-- 上一张按钮（多于1张时显示） -->
-    <button 
-      v-if="totalImages > 1" 
-      class="carousel-btn prev" 
-      @click="prev"
-      aria-label="上一张"
-    >
-      ❮
-    </button>
-
-    <!-- 下一张按钮（多于1张时显示） -->
-    <button 
-      v-if="totalImages > 1" 
-      class="carousel-btn next" 
-      @click="next"
-      aria-label="下一张"
-    >
-      ❯
-    </button>
-
-    <!-- 指示点（多于1张时显示） -->
-    <div v-if="totalImages > 1" class="indicators">
-      <span 
-        v-for="(_, index) in images" 
-        :key="index"
-        :class="['indicator-dot', { active: index === currentIndex }]"
-        @click="goTo(index)"
-      ></span>
+    <!-- 右侧内容区域 -->
+    <div class="content">
+      <h3>欢迎来到我的博客！</h3>
+      <p>这是一个使用Vue.js构建的博客网站。</p>
+      <p>在这里你可以找到我的最新文章、项目和想法。</p>
     </div>
   </div>
 </template>
@@ -141,6 +150,12 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
+.widebox {
+  display: grid;  
+  grid-template-columns: 3fr 2fr; /* 两列布局，平均分配宽度 */
+  gap: 20px; /* 列间距 */
+}
+
 .carousel {
   position: relative;
   width: 100%;  /* 宽度自适应 */
@@ -148,7 +163,27 @@ onUnmounted(() => {
   overflow: hidden;
   border-radius: 8px;
   background-color: #f0f0f0;
-  aspect-ratio: 16 / 9; /* 固定宽高比，避免页面抖动 */
+  aspect-ratio: 4 / 3; /* 固定宽高比，避免页面抖动 */
+}
+
+.content {
+  background-color: #ffffff; /* 背景颜色 */
+  padding: 20px;         /* 内边距 */
+  border-radius: 8px;    /* 圆角 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+  /* 上下居中 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h3 {
+  text-indent: 5px;
+  text-align: center;
+}
+
+p {
+  text-indent: 2em; /* 首行缩进 */
 }
 
 .image-container {
