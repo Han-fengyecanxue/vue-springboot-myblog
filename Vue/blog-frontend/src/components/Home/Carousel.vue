@@ -158,6 +158,18 @@ onUnmounted(() => {
   margin-bottom: 20px;
 }
 
+/* 小屏幕适配 */
+@media (max-width: 768px) {
+  .widebox {
+    grid-template-columns: 1fr;
+    gap: 16px; /* 可视情况缩小间距 */
+  }
+
+  .content {
+    margin: 0; /* 移除左右 margin，让内容撑满 */
+  }
+}
+
 .carousel {
   position: relative;
   width: 100%;  /* 宽度自适应 */
