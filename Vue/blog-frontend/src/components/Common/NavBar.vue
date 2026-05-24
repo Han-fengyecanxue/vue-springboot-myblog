@@ -1,5 +1,9 @@
 <template>
-  <div class="nav-container">
+  <div 
+    class="nav-container"
+    @mouseenter="isOpen = true"
+    @mouseleave="isOpen = false"
+    >
     <!-- 左圆右方按钮（常驻，带文字） -->
     <button
       class="nav-toggle"

@@ -2,9 +2,25 @@
 <script setup>
 import HeaderBar from './components/Common/HeaderBar.vue';
 import NavBar from './components/Common/NavBar.vue';
+
+import { ref } from 'vue'
+import OpenWeb from './components/OpenWeb/OpenWeb.vue'
+
+const showOpenWeb = ref(!sessionStorage.getItem('OpenWeb'))
+
+const handleEnter = () => {
+  showOpenWeb.value = false
+  sessionStorage.setItem('OpenWeb', 'true')
+}
 </script>
 
 <template>
+  <!-- 开场动画覆盖层 -->
+  <OpenWeb
+    v-if="showOpenWeb"
+    @enter="handleEnter"
+  />
+
   <!-- 首页组件 -->
   <div class="container">
     <HeaderBar />

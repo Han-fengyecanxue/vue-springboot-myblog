@@ -154,6 +154,8 @@ onUnmounted(() => {
   display: grid;  
   grid-template-columns: 3fr 2fr; /* 两列布局，平均分配宽度 */
   gap: 20px; /* 列间距 */
+  /* 下边距 */
+  margin-bottom: 20px;
 }
 
 .carousel {
@@ -168,6 +170,7 @@ onUnmounted(() => {
 
 .content {
   background-color: #ffffff; /* 背景颜色 */
+  margin: 10px;
   padding: 20px;         /* 内边距 */
   border-radius: 8px;    /* 圆角 */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 阴影效果 */
