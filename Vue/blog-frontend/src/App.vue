@@ -3,7 +3,7 @@
 import HeaderBar from './components/Common/HeaderBar.vue';
 import NavBar from './components/Common/NavBar.vue';
 
-import { ref } from 'vue'
+import { ref, provide } from 'vue'
 import OpenWeb from './components/OpenWeb/OpenWeb.vue'
 
 const showOpenWeb = ref(!sessionStorage.getItem('OpenWeb'))
@@ -12,6 +12,11 @@ const handleEnter = () => {
   showOpenWeb.value = false
   sessionStorage.setItem('OpenWeb', 'true')
 }
+
+// 提供方法给任意子孙组件
+provide('openSplash', () => {
+  showOpenWeb.value = true
+})
 </script>
 
 <template>

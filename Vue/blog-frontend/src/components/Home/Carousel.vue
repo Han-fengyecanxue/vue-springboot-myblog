@@ -46,12 +46,17 @@
       <h3>欢迎来到我的博客！</h3>
       <p>这是一个使用Vue.js构建的博客网站。</p>
       <p>在这里你可以找到我的最新文章、项目和想法。</p>
+      <button class="play-game-btn" @click="openSplash">玩小游戏</button>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onUnmounted, watch } from 'vue'
+import { ref, computed, onMounted, onUnmounted, watch, inject } from 'vue'
+
+const openSplash = inject('openSplash')  // 从父组件注入开场动画方法
+
+defineEmits()
 
 // 接收图片列表（支持图片URL字符串数组）
 const props = defineProps({
@@ -199,6 +204,22 @@ h3 {
 
 p {
   text-indent: 2em; /* 首行缩进 */
+}
+
+.play-game-btn {
+  margin-top: 20px;
+  padding: 10px 10px;
+  font-size: 16px;  
+  color: #fff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: flex-start; /* 水平靠左 */
+  /* 左边距 */
+  margin-left: 30px;
+  /* 鼠标悬停效果 */
+  transition: background-color 0.3s ease;
 }
 
 .image-container {
